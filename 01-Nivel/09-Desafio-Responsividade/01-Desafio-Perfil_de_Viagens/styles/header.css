@@ -1,0 +1,41 @@
+#profile img {
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#profile-info {
+    max-width: 18.5rem;
+}
+
+#info ul {
+    width: 17.5rem;
+}
+
+#info li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+@media (width >= 80rem) {
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #profile {
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    #profile img {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    #profile-info {
+        max-width: 24rem;
+    }
+}

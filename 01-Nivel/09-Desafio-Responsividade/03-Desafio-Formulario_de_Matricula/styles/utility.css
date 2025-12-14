@@ -1,0 +1,42 @@
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* padding */
+.p-base {
+    padding: var(--p-base);
+}
+
+@media (width >= 80rem) {
+    .desktop-only {
+        display: initial;
+    }
+
+    .flex-direction {
+        flex-direction: row;
+    }
+}

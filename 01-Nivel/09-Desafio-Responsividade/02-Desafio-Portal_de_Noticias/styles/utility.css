@@ -1,0 +1,129 @@
+.text-2xl {
+    font: var(--text-h1);
+}
+
+.text-xl {
+    font: var(--text-h2);
+}
+
+.text-lg {
+    font: var(--text-h3);
+}
+
+.text-sm {
+    font: var(--text-paragraph);
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-col-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gap-8 {
+	gap: .5rem;
+}
+
+.gap-16 {
+	gap: 1rem;
+}
+
+.gap-24 {
+	gap: 1.5rem;
+}
+
+.gap-32 {
+	gap: 2rem;
+}
+
+.gap-weakly {
+	gap: var(--gap-weakly);
+}
+
+.row-gap-conteudo {
+	row-gap: var(--row-gap-conteudo);
+}
+
+/* padding */
+.p-noticia-main {
+    padding: var(--p-noticia-main);
+}
+
+/* padding-top */
+.p-top-h {
+    padding-top: var(--p-top-h);
+}
+
+/* padding-inline */
+.px-principal {
+    padding-inline: var(--px-principal);
+}
+
+/* padding-block */
+.py-nav-01 {
+    padding-block: var(--py-nav-01);
+}
+
+.py-nav-02 {
+    padding-block: var(--py-nav-02);
+}
+
+.py-conteudo {
+    padding-block: var(--py-conteudo);
+}
+
+.container {
+    --max-width: 22.5rem;
+    width: min(var(--max-width), 100% - var(--px-principal) * 2);
+    margin-inline: auto;
+
+    padding-inline: var(--px-principal);
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (width >= 80rem) {
+    .container {
+        --max-width: 80rem;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .flex-direction {
+        flex-direction: row;
+    }
+}

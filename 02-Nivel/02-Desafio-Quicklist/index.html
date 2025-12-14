@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicklist</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <img src="assets/logo.svg" alt="logo" class="desktop-only">
+        
+        <div id="main-content">
+            <header>
+                <a href="#"><- Voltar</a>
+                <h1>Lista TO-DO</h1>
+            </header>
+
+            <main>
+                <form action="" method="post" enctype="multipart/form-data" class="flex-direction">
+                    <input type="text" id="todo-input" placeholder="Adicione um novo item" autocomplete="off">
+                    <button>Adicionar item</button>
+                </form>
+
+                <ul role="list" id="list">
+                    <!-- <li>
+                        <div class="check-box">
+                            <input type="checkbox" id="chk-1">
+                        </div>
+                        <label for="chk-1">Pão de forma</label>
+                        <a href="#" class="delete-button">
+                            <img src="assets/icons/garbage.svg" alt="garbage">
+                        </a>
+                    </li>
+
+                    <li>
+                        <div class="check-box">
+                            <input type="checkbox" id="chk-2">
+                        </div>
+                        <label for="chk-2">forma</label>
+                        <a href="#" class="delete-button">
+                            <img src="assets/icons/garbage.svg" alt="garbage">
+                        </a>
+                    </li> -->
+                </ul>
+
+                <div id="alerta">
+                    <img src="assets/icons/alert.svg" alt="alerta">
+                    <p>O item foi removido da lista</p>
+                    <a href="#">
+                        <img src="assets/icons/close.svg" alt="close">
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

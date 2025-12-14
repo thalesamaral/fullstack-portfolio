@@ -1,0 +1,63 @@
+.input-item {
+    .button-wrapper {
+        display: flex;
+        height: 3rem;
+        padding: .25rem;
+        gap: .25rem;
+
+        border: 1px solid var(--input-stroke);
+        border-radius: .5rem;
+        background-color: var(--input-base);
+        
+        .button-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: .25rem;
+            gap: .5rem;
+            border-radius: .5rem;
+            flex: 1 0 0;
+            
+            cursor: pointer;
+
+            &:hover, &:focus, &:has(:checked) {
+                background-color: var(--shape-hover);
+                label {
+                    color: var(--text-heading);
+                }
+            }
+            & img {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .button-inner:nth-child(1) {
+            &:hover, &:focus-within, &:has(:checked) {
+                img {
+                    content: url(../../assets/icons/building-blue.svg);
+                }
+            }
+        }
+        
+        .button-inner:nth-child(2) {
+            &:hover, &:focus-within, &:has(:checked) {
+                img {
+                    content: url(../../assets/icons/video-blue.svg);
+                }
+            }
+        }
+    }
+}
+
+.button-inner {
+    position: relative;
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+}

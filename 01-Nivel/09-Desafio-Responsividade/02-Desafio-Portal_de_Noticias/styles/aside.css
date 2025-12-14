@@ -1,0 +1,31 @@
+aside {
+    #ads {
+        width: 20.5rem;
+        height: 11.75rem;
+    }
+
+    #more {
+        margin-top: 2rem;
+        
+        article {
+            img {
+                height: 4.5rem;
+            }
+
+            & > div {
+                height: 4.5rem;
+            }
+        }
+    }
+}
+
+@media (width >= 80rem) {
+    aside {
+        grid-area: aside;
+
+        #ads {
+            width: 30rem;
+            height: 17.5rem;
+        }
+    }
+}

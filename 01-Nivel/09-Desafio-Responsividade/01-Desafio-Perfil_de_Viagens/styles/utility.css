@@ -1,0 +1,105 @@
+.container {
+    --max-width: 22.5rem;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+
+    padding-inline: var(--px-lg);
+}
+
+.bg-surface-color {
+    background-color: var(--surface-color);
+}
+
+.text-h1 {
+    font: var(--text-lg);
+    color: var(--text-color-primary);
+}
+
+.text-nav {
+    font: var(--text-nav);
+}
+
+.desktop-only {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.direction {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-8 {
+    gap: .5rem;
+}
+
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-24 {
+    gap: 1.5rem;
+}
+
+.gap-32 {
+    gap: 2rem;
+}
+
+/* padding */
+.p-header {
+    padding: var(--p-header);
+}
+
+/* padding-inline */
+.px-lg {
+    padding-inline: var(--px-lg);
+}
+
+/* padding-block */
+.py-nav-ul {
+    padding-block: var(--py-nav-ul);
+}
+
+.py-md {
+    padding-block: var(--py-md);
+}
+
+.py-lg {
+    padding-block: var(--py-lg);
+}
+
+@media (width >= 80rem) {
+    .container {
+        --max-width: 80rem;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .direction {
+        flex-direction: row;
+    }
+
+    .text-h1 {
+        font: var(--text-xl);
+    }
+}

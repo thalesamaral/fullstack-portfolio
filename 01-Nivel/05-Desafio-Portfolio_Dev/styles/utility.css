@@ -1,0 +1,43 @@
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.flex {
+    display: flex;
+}
+
+.col-align_items_center {
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-lg {
+    font: var(--title-lg);
+    color: var(--gray-600);
+}
+
+.title-md {
+    font: var(--title-md);
+    color: var(--gray-600);
+}
+
+.title-sm {
+    font: var(--title-sm);
+    color: var(--gray-600);
+}
+
+.subtitle {
+    font: var(--subtitle);
+    color: var(--gray-500);
+}
+
+.text-md {
+    font: var(--text-md);
+    color: var(--gray-500);
+}
+
+.text-sm {
+    font: var(--text-sm);
+    color: var(--gray-500);
+}

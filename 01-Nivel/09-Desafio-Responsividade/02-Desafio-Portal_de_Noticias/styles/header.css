@@ -1,0 +1,44 @@
+#primary {
+    div {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    div:nth-child(2) {
+        margin-inline: auto;
+    }
+
+    div:nth-child(3) {
+        justify-self: end;
+    }
+}
+
+#secondary {
+    font: var(--text-span);
+    color: var(--text-color-secondary);
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+    
+    & ul {
+        width: 52.25rem;
+    }
+
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--stroke-color);
+    }
+}
+
+@media (width >= 80rem) {
+    #secondary {
+        & ul {
+            width: auto;
+            justify-content: space-between;
+        }
+    }
+}

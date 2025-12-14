@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* CORES */
+    --background-primary: #F4F5FB;
+
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    /* TIPOGRAFIA */
+    --title: 700 1.5rem/2rem "Inter";
+    --label: 600 1rem/1.25rem "Inter";
+    --paragraph: 400 1rem/1.25rem "Inter";
+    --link: 400 0.875rem/1rem "Inter";
+}
+
+body {
+    background-color: var(--background-primary);
+    font: var(--paragraph);
+    color: var(--content-secondary);
+}
+
+#app {
+    --max-width: 24.375rem;
+    width: min(var(--max-width), 100% - 2rem * 2);
+    margin-inline: auto;
+    padding: 2rem;
+    
+    min-height: 100vh;
+    /* border: solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.desktop-only {
+    display: none;
+}
+
+#main-content {
+    width: 100%;
+}
+
+h1 {
+    font: var(--title);
+    color: var(--content-primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
+ul[role="list"] {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (width >= 80rem) {
+    #app {
+        --max-width: 80rem;
+    }
+
+    .flex-direction {
+        flex-direction: row;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    #main-content {
+        width: 40rem;
+    }
+}

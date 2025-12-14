@@ -1,0 +1,59 @@
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: .75rem 1.5rem;
+    font: var(--text-span);
+
+    a {
+        justify-self: end;
+        align-items: center;
+        gap: .5rem;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            height: 1rem;
+            width: 1rem;
+        }
+
+        &:hover span {
+            background-image: url(../assets/icons/ArrowRight-hover.svg);
+        }
+    }
+}
+
+#featured, #weekly {
+    h2, p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: inherit;
+    }
+}
+
+#ai, #more {
+    article {
+        img {
+            height: 5rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        
+        h3, p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        
+        h3 {
+            margin-top: .5rem;
+            -webkit-line-clamp: 2;
+            line-clamp: inherit;
+        }
+        
+        p {
+            margin-top: .25rem;
+            -webkit-line-clamp: 4;
+            line-clamp: inherit;
+        }
+    }
+}

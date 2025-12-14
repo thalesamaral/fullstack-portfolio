@@ -1,0 +1,44 @@
+.action-wrapper {
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+button {
+    all: unset;
+    font-weight: 500;
+    color: var(--text-highlight);
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+
+    &.btn-primary {
+        color: white;
+        background-color: #E43A12;
+
+        &:hover,
+        &:focus {
+            background-color: #F3541C;
+        }
+    }
+
+    &.btn-secondary {
+        border: 1px solid var(--text-highlight);
+        
+        &:hover,
+        &:focus {
+            color: #E43A12;
+            outline: .25rem solid var(--surface-secondary);
+        }
+    }
+}
+
+@media (width >= 80rem) {
+    button {
+        &.btn-secondary {
+            margin-left: auto;
+        }
+    }
+}

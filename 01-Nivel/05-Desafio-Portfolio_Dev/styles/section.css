@@ -1,0 +1,183 @@
+#intro {
+    background-image: url(../assets/images/Background_Intro.png);
+    padding: 120px 163px 57px 163px;
+    gap: 94px;
+
+    &>img {
+        width: 32px;
+        height: 32px;
+    }
+
+    #info {
+        justify-items: center;
+        width: 1040px;
+        gap: 80px;
+        
+        header {
+            width: 680px;
+            gap: 56px;
+
+            #avatar {
+                position: relative;
+                img:nth-child(1) {
+                    width: 96px;
+                    height: 96px;
+                    margin: 8px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: solid 5px var(--red);
+                }
+
+                img:nth-child(2) {
+                    width: 32px;
+                    height: 32px;
+                    object-fit: cover;
+                    flex-shrink: 0;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                }
+            }
+
+            #text {
+                gap: 20px;
+                align-self: stretch;
+                text-align: center;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 754px;
+            
+            .tag {
+                background-color: var(--gray-300);
+                display: flex;
+                align-items: center;
+                border-radius: 16px;
+                gap: 8px;
+                padding-inline: 16px;
+                padding-block: 8px;
+            }
+        }
+    }
+}
+
+#projects {
+    padding: 72px 120px 144px 120px;
+    gap: 56px;
+    
+    header {
+        width: 1040px;
+    }
+
+    #grid_cards {
+        width: 1040px;
+        grid-template-columns: auto auto auto;
+        gap: 24px;
+
+        .card {
+            background-color: var(--gray-300);
+            width: 330px;
+            height: 280px;
+            padding: 12px;
+            gap: 20px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            
+            &:hover {
+                border: 1.5px solid var(--gray-400);                
+            }
+            
+            img {
+                width: 306px;
+                height: 156px;
+                border-radius: 8px;
+                flex-shrink: 0;
+            }
+
+            .title {
+                padding: 4px;
+                align-items: start;
+            }
+        }
+    }
+}
+
+#services {
+    background-color: var(--gray-100);
+    padding: 120px;
+    padding-top: 88px;
+    gap: 56px;
+
+    .grid {
+        grid-auto-flow: column;
+        .card_srv {
+            border-radius: 12px;
+            border: 2px solid var(--gray-200);
+            padding: 20px;
+            gap: 20px;
+            width: 280px;
+            align-items: start;
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .title {
+                align-items: start;
+            }
+        }
+    }
+}
+
+#contact {
+    background-image: url(../assets/images/Background_Contacts.png);
+    padding: 128px 120px 200px;
+    gap: 48px;
+
+    header {
+        span {
+            color: var(--purple)
+        }
+    }
+
+    ul {
+        gap: 16px;
+
+        span {
+            margin-right: auto;
+        }
+        
+        .tag {
+            background-color: var(--gray-300);
+            font: var(--text-md);
+            color: var(--gray-500);
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+                color: var(--blue);
+            }
+            /* Hide hover images by default */
+            & img.hover {
+                display: none;
+            }
+
+            /* Show hover images on li hover and hide default images */
+            &:hover img.default {
+                display: none;
+            }
+
+            &:hover img.hover {
+                display: inline;
+            }
+        }
+    }
+}

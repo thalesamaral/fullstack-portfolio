@@ -1,0 +1,56 @@
+.container {
+    --max-width: 22.5rem;
+    width: min(var(--max-width), 100% - var(--px-base) * 2);
+    margin-inline: auto;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.flex-direction-2 {
+    flex-direction: column-reverse;
+}
+
+/* --- padding --- */
+.p-header {
+    padding-block: 1rem;
+    padding-inline: var(--px-base);
+}
+
+.p-hero {
+    padding-block: var(--py-hero);
+    padding-inline: var(--px-base);
+}
+
+.py-banner {
+    padding-block: var(--py-banner);
+}
+
+.p-gallery {
+    padding-block: var(--py-gallery);
+    padding-inline: var(--px-base);
+}
+
+.p-footer {
+    padding-block: var(--py-footer);
+    padding-inline: var(--px-base);
+}
+
+@media (width >= 80rem) {
+    .container {
+        --max-width: 80rem;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .flex-direction, .flex-direction-2 {
+        flex-direction: row;
+    }
+}

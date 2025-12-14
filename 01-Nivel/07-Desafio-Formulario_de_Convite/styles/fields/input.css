@@ -1,0 +1,83 @@
+.input-item {
+    input, textarea {
+        height: 3rem;
+        padding-inline: 1rem;
+        border-radius: .5rem;
+        outline: 0;
+
+        border: 1px solid var(--input-stroke);
+        background-color: var(--input-base);
+        color: var(--text-body);
+        font: var(--body-md);
+
+        &::placeholder {
+            color: var(--input-placeholder);
+        }
+        
+        &:focus, &:focus-within {
+            border-color: var(--brand-light);
+        }
+    }
+
+    textarea {
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .error {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        font: var(--body-xs);
+        color: var(--danger);
+
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &:has(.error) {
+        input:invalid {
+            border-color: var(--danger);
+        }
+    }    
+}
+
+input[type=datetime-local] {
+    text-transform: uppercase;
+    color: var(--input-placeholder);
+
+    &:valid {
+        color: var(--text-body);
+    }
+}
+
+input[type=datetime-local] {
+    position: relative;
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../../assets/icons/calendar.svg) center/contain;
+        right: 1rem;
+        width: 1rem;
+        height: 1rem;
+        
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 3rem #1C1F21 inset !important;
+    -webkit-text-fill-color: #C8CDD0 !important;
+}

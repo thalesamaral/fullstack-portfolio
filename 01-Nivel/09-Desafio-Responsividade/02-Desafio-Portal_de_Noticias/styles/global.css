@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+:root {
+    --brand-color-light: #60A5FA;
+    --brand-color-dark: #1D4ED8;
+    --bg-color: #0F172A;
+    --stroke-color: #1E293B;
+    --text-color-primary: #F1F5F9;
+    --text-color-secondary: #CBD5E1;
+
+    --font-family: "Archivo", sans-serif;
+
+    --text-h1: 800 1.5rem/135% var(--font-family);
+    --text-h2: 800 1rem/140% var(--font-family);
+    --text-h3: 800 .875rem/140% var(--font-family);
+    --text-span: 600 .875rem/145% var(--font-family);
+    --text: 400 1rem/140% var(--font-family);
+    --text-paragraph: 400 .875rem/160% var(--font-family);
+
+    /* padding */
+    --p-noticia-main: 1rem;
+    --p-top-h: .75rem;
+
+    --px-principal: 1rem;
+    
+    --py-nav-01: 1rem;
+    --py-nav-02: .875rem;
+    --py-conteudo: 1rem;
+
+    --row-gap-conteudo: 2rem;
+    --gap-weakly: 2rem;
+}
+
+body {
+    font: var(--text);
+    color: var(--text-color-primary);
+    background-color: var(--bg-color);
+}
+
+main {
+    margin-block: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (width >= 80rem) {
+    :root {
+        --p-noticia-main: 1.5rem;
+
+        --px-principal: 2rem;
+
+        --py-nav-01: 1.25rem;
+        --py-conteudo: 2.5rem;
+
+        --row-gap-conteudo: 5rem;
+        --gap-weakly: 1rem;
+    }
+
+    main {
+        column-gap: 2rem;
+
+        display: grid;
+        grid-template-columns: 2fr 1.1fr;
+        grid-template-areas:
+        "featured featured"
+        "weekly weekly"
+        "ai aside";
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--brand-color-light);
+}
+
+h1, h2, h3 {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content-tag {
+    display: inline-block;
+    background-color: var(--brand-color-dark);
+    padding: .25rem .5rem;
+    border-radius: 4px;
+    font: 500 .625rem/1.2 var(--font-family);
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    color: var(--text-color-primary);
+    box-shadow: 0 .25rem 1rem rgba(2, 6, 23, 0.251);
+}
+
+ul[role="list"] {
+    list-style: none;
+}

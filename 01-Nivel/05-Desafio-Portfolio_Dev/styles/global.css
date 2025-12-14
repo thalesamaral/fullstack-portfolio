@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #E3646E;
+    --purple: #BB72E9;
+    --blue: #3996DB;
+    --green: #82BC4F;
+    --yellow: #EABD5F;
+    --gray-100: #0d0e12;
+    --gray-200: #17181c;
+    --gray-300: #292c33;
+    --gray-400: #878EA1;
+    --gray-500: #C0C4CE;
+    --gray-600: #E2E4E9;   
+    
+    --font-asap: "Asap", sans-serif;
+    --title-lg: 800 56px/120% var(--font-asap);
+    --title-md: 800 24px/120% var(--font-asap);
+    --title-sm: 800 16px/120% var(--font-asap);
+    
+    --font-incosolata: "Inconsolata", monospace;
+    --subtitle: 400 20px/120% var(--font-incosolata);
+    
+    --font-maven_pro: "Maven Pro", sans-serif;
+    --text-md: 400 16px/140% var(--font-maven_pro);
+    --text-sm: 400 14px/140% var(--font-maven_pro);
+}
+
+body {
+    background-color: var(--gray-200);
+    font: var(--text-sm);
+    color: var(--gray-400);
+}
+
+/* main {
+    width: 1366px;
+    margin-inline: auto;
+} */
+
+ul {
+    list-style: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    span {
+        color: var(--red);
+    }
+}
+
+a {
+    text-decoration: none;
+}

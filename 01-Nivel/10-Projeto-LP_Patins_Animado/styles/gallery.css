@@ -1,0 +1,125 @@
+#gallery {
+    & header {
+        text-align: center;
+    }
+
+    & header span {
+        font: 500 var(--text-sm)/1.5 var(--ff-base);
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    & figure {
+        position: relative;
+        border-radius: 2.5rem;
+        overflow: hidden;
+        line-height: 0;
+
+        animation: img-appear linear backwards;
+        animation-timeline: view();
+        animation-range: 100px 300px;
+
+        &[data-delay] {
+            animation-range: 150px 350px;
+        }
+
+        & > img {
+            height: 16rem;
+            object-fit: cover;
+            transition: scale 500ms;
+        }
+
+        &:hover {
+            & > img {
+                scale: 1.1;
+            }
+
+            figcaption {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    & figcaption {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: .5rem;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        
+        font: 500 var(--text-sm)/1.5 var(--ff-base);
+        color: white;
+
+        background: linear-gradient(
+            to top,
+            rgb(0 0 0 / 0.64),
+            rgb(0 0 0 / 0)
+        );
+
+        transform: translateY(100%);
+        transition: transform 500ms;
+
+        & > img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media (width >= 80rem) {
+    #gallery {
+        & .content {
+            display: grid;
+            grid-template-areas:
+            "A B B"
+            "C C D"
+            ;
+            
+            margin-top: 2.5rem;
+            gap: 2.5rem;
+        }
+
+        & figure {
+            & > img {
+                height: 25rem;
+            }
+
+            &:nth-child(1) {
+                grid-area: A;
+            }
+            &:nth-child(2) {
+                grid-area: B;
+            }
+            &:nth-child(3) {
+                grid-area: C;
+            }
+            &:nth-child(4) {
+                grid-area: D;
+            }
+        }
+    }
+}
+
+@keyframes img-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}

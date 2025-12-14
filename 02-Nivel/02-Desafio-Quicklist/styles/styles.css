@@ -1,0 +1,141 @@
+@import url(global.css);
+
+img[alt="logo"] {
+    margin-bottom: 4rem;
+}
+
+header {
+    margin-bottom: 3rem;
+    a {
+        font: var(--link);
+        color: var(--color-brand);
+
+        &:hover {
+            color: var(--color-brand-hover);
+        }
+    }
+
+    h1 {
+        margin-top: 1rem;
+    }
+}
+
+form, ul {
+    margin-bottom: 2.5rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+
+    input {
+        height: 2.75rem;
+        width: 100%;
+        padding-inline: 1rem;
+        
+        outline: 0;
+        border: 2px solid var(--border-primary);
+        border-radius: .75rem;
+
+        &::placeholder {
+            color: var(--content-tertiary);
+        }
+        
+        &:hover {
+            border-color: var(--border-hover);
+        }
+
+        &:focus {
+            border-color: var(--color-brand);
+        }
+    }
+    
+    button {
+        padding: .625rem 1.5rem;
+        min-width: max-content;
+        
+        background-color: var(--color-brand);
+        color: white;
+        font: var(--label);
+
+        border-radius: .75rem;
+        border: none;
+        
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-brand-hover);
+        }
+    }
+}
+
+ul {
+    li + li {
+        margin-top: .75rem;
+    }
+
+    li {
+        display: flex;
+        padding: .5rem .75rem;
+        background-color: white;
+    
+        .check-box {
+            display: flex;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid var(--border-primary);
+            border-radius: .375rem;
+            
+            cursor: pointer;
+            
+            &:hover {
+                border-color: var(--border-hover);
+            }
+    
+            & input {
+                all: unset;
+                width: 100%;
+                height: 100%;
+            }
+    
+            &:has(:checked) {
+                background: var(--color-brand) url(../assets/icons/select.svg) no-repeat center/contain;
+                
+                & + label {
+                    text-decoration: line-through;
+                    color: var(--content-tertiary);
+                }
+            }
+        }
+
+        label {
+            word-break: break-word;
+            white-space: normal;
+        }
+    }
+}
+
+li, #alerta {
+    align-items: center;
+    gap: .75rem;
+    border-radius: .75rem;
+
+    label, p {
+        flex: 1;
+        min-height: 2rem;
+        align-content: center;
+    }
+}
+
+/* #alerta { */
+main > div {
+    display: none;
+    padding: .75rem;
+    background-color: var(--color-danger);
+    color: white;
+    font: var(--label);
+}
+
+.show-alerta {
+    display: flex;
+}

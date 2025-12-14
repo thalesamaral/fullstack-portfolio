@@ -1,0 +1,79 @@
+#app {
+    /* border: 1px solid blue; */
+    max-width: 1280px;
+    height: 100vh;
+    
+    display: grid;
+    /* grid-template-columns: 25rem 51.25rem; */
+    /* grid-template-columns: 31.25% 68.75%; */
+    /* grid-template-columns: 31.25% 64.0625%; */ /* (820 . 100)/1280 */
+    grid-template-columns: 31.25% 67%;
+    place-content: center;
+    align-content: start;
+
+    margin-inline: auto;
+    overflow: auto;
+    padding: 1.25rem;
+    gap: 1.25rem;
+}
+
+main#invite {
+    /* outline: 1px solid green; */
+    border-radius: .75rem;
+    background-color: var(--shape-body);
+    padding: 5rem 8.125rem;
+    /* padding: 5rem 6.875rem; */
+    /* padding: 5rem 7rem; */
+
+    #invite-content {
+        /* outline: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 2.5rem;
+
+        h1 {
+            font-size: 1.75rem;
+            color: var(--text-heading);
+        }
+    }
+}
+
+aside#brand {
+    /* outline: 1px solid red; */
+    background: url(../assets/Background.png) center/contain;
+    background-size: cover;
+    border-radius: .75rem;
+    padding: 2rem;
+
+    /* margin-left: auto; */
+    /* width: 400px; */
+    /* height: 728px; */
+    height: 45.5rem;
+
+    & #brand-content {
+        /* outline: 1px solid red; */
+        /* max-width: 21rem; */
+
+        & h1.logo {
+            font: var(--text-logo);
+            color: var(--pink);
+        }
+
+        & h2 {
+            font: var(--text-heading);
+            margin-block: 4px;
+        }
+
+        & img.logo {
+            width: 45.851px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        & .frame {
+            width: 6.25rem;
+            height: 6.25rem;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+#ai {
+    article {
+        & > :nth-child(1) {
+            order: 1;
+        }
+    }
+}
+
+@media (width >= 80rem) {
+    #ai {
+        grid-area: ai;
+
+        article {
+            img {
+                height: 11rem;
+            }
+
+            & > div {
+                height: 11rem;
+            }
+            
+            & > :nth-child(1) {
+                order: 0;
+            }
+        }
+    }
+}

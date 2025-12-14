@@ -1,0 +1,38 @@
+#weekly {
+    img {
+        align-self: stretch;
+    }
+
+    & > div {
+        padding-bottom: 1.5rem;
+    }
+
+    figure {
+        position: relative;
+
+        .content-tag {
+            position: absolute;
+                top: .5rem;
+                left: .5rem;
+        }
+
+        p {
+            margin-top: .5rem;
+            font-weight: 800;
+        }
+    }
+}
+
+@media (width >= 80rem) {
+    #weekly {
+        grid-area: weekly;
+    
+        & > div {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        img {
+            height: 10rem;
+        }
+    }
+}
