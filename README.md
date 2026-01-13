@@ -69,11 +69,11 @@ ORMs e arquitetura moderna.
 
 | Projeto | Stack Principal | O que demonstra |
 | ------ | --------------- | --------------- |
-| **Hair Day** | JavaScript · Webpack · JSON Server | Frontend estruturado, bundler, simulação de API REST, manipulação de datas |
-| **API de Ticket de Suporte** | Node.js | Estrutura inicial de API, rotas, controllers, middlewares e persistência |
+| ✅ **[Hair Day](https://github.com/thalesamaral/Hair_Day)** | JavaScript · Webpack · JSON Server | Frontend estruturado, bundler, simulação de API REST, manipulação de datas |
+| ✅ **[Ticket de Suporte](https://github.com/thalesamaral/Support_Tickets)** | Node.js | Estrutura inicial de API, rotas, controllers, middlewares e persistência |
 | **API de Restaurante** | Node.js · Express · Knex | API REST com migrations, Query Builder e regras de negócio |
 | ✅ **[RocketLog](https://github.com/thalesamaral/rocketlog)** | Node.js · Prisma · PostgreSQL · Docker | API completa com ORM, autenticação JWT, validação, testes e containers |
-| **Jogo de Adivinhação** | React · Vite · Hooks | Fundamentos de React, estado, componentes e organização |
+| ✅ **[Jogo de Adivinhação](https://github.com/thalesamaral/adivinhe)** | React · Vite · Hooks | Fundamentos de React, estado, componentes e organização |
 | **Refund 2.0 (Full Stack)** | React · Tailwind · API REST | Integração frontend + backend, consumo de API e deploy |
 
 📌 Esses projetos consolidam minha transição dos fundamentos para **arquitetura full stack aplicada**.
